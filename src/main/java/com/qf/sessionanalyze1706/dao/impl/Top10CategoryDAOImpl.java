@@ -12,8 +12,17 @@ import com.qf.sessionanalyze1706.jdbc.JDBCHelper;
 public class Top10CategoryDAOImpl implements ITop10CategoryDAO {
 
 	@Override
+	public void truncate() {
+		String sql = "truncate table top10_category";
+
+		JDBCHelper jdbcHelper = JDBCHelper.getInstance();
+		jdbcHelper.executeUpdate(sql, null);
+
+	}
+
+	@Override
 	public void insert(Top10Category category) {
-		String sql = "insert into top10_category values(?,?,?,?,?)";  
+		String sql = "insert into top10_category values(?,?,?,?,?)";
 		
 		Object[] params = new Object[]{category.getTaskid(),
 				category.getCategoryid(),

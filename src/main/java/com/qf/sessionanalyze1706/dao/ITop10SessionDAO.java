@@ -9,6 +9,7 @@ import com.qf.sessionanalyze1706.domain.Top10Session;
  */
 public interface ITop10SessionDAO {
 
+	void truncate();
 	void insert(Top10Session top10Session);
 	
 }

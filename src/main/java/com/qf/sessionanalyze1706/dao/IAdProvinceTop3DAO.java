@@ -12,6 +12,7 @@ import java.util.List;
  */
 public interface IAdProvinceTop3DAO {
 
+	void truncate();
 	void updateBatch(List<AdProvinceTop3> adProvinceTop3s);
 	
 }

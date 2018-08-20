@@ -15,6 +15,14 @@ import java.util.List;
 public class AreaTop3ProductDAOImpl implements IAreaTop3ProductDAO {
 
 	@Override
+	public void truncate() {
+		String sql = "truncate table area_top3_product";
+
+		JDBCHelper jdbcHelper = JDBCHelper.getInstance();
+		jdbcHelper.executeUpdate(sql, null);
+	}
+
+	@Override
 	public void insertBatch(List<AreaTop3Product> areaTopsProducts) {
 		String sql = "INSERT INTO area_top3_product VALUES(?,?,?,?,?,?,?,?)";
 		

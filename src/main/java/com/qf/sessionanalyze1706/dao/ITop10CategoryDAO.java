@@ -9,6 +9,7 @@ import com.qf.sessionanalyze1706.domain.Top10Category;
  */
 public interface ITop10CategoryDAO {
 
+	void truncate();
 	void insert(Top10Category category);
 	
 }

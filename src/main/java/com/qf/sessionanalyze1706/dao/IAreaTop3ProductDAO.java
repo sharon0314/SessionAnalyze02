@@ -11,6 +11,7 @@ import java.util.List;
  */
 public interface IAreaTop3ProductDAO {
 
+	void truncate();
 	void insertBatch(List<AreaTop3Product> areaTopsProducts);
 	
 }
